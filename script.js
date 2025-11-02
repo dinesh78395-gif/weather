@@ -219,15 +219,9 @@ async function fetchAllByCity(city){
   }
 }
 
-// Geolocation on load (try to auto-detect)
-if(navigator.geolocation){
-  navigator.geolocation.getCurrentPosition(pos => {
-    fetchAllByCoords(pos.coords.latitude, pos.coords.longitude);
-  }, err => {
-    // silent fail — user can search
-    console.warn('Geolocation failed:', err?.message);
-  }, { timeout: 6000 });
-}
+// Ask for location only when user clicks button
+setStatus('Click "Use my location" or search a city to start.');
+
 
 // Search handling + simple suggestions from history
 searchForm.addEventListener('submit', (e) => {
@@ -291,6 +285,7 @@ gsap.from('.topbar', {opacity:0,y:-6,duration:0.7});
 
 // Render initial saved/his
 renderSaved();
+
 
 
 
