@@ -1,5 +1,5 @@
 // script.js (module)
-const OPENWEATHER_API_KEY = '906e189867a9144be1344f96c10b035f'; // <-- REPLACE THIS with your key
+const OPENWEATHER_API_KEY = 'c7dd89492b375030e41d97d0ba745ce2'; // <-- REPLACE THIS with your key
 
 // Elements
 const cityInput = document.getElementById('cityInput');
@@ -290,3 +290,4 @@ renderSaved();
 
 
     
+
